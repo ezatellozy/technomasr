@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <navbar />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+
+  <main-footer />
+  <whatsup />
 </template>
 
+<script>
+import Navbar from '@/components/Navbar.vue'
+import MainFooter from './components/MainFooter.vue'
+import Whatsup from './components/Whatsup.vue'
+export default {
+  components: { Navbar, MainFooter, Whatsup },
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.logo {
+  width: 100px;
 }
 
-nav {
-  padding: 30px;
+.flex-centerd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.is-rtl {
+  direction: rtl;
 }
 </style>
