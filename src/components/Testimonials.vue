@@ -1,8 +1,14 @@
 <template>
   <div id="testimonials" class="testimonials py-50">
     <div class="container">
-      <h2 class="main-title">قالوا عن تكنو مصر</h2>
-      <div class="slider-container">
+      <div class="position-relative">
+        <h2 class="main-title">قالوا عن تكنو مصر</h2>
+        <p class="text-center">
+          نسعد دائما بالتواصل مع عملائنا بشكل مستمر للتعرف على آراءهم فى مستوى
+          خدماتنا
+        </p>
+      </div>
+      <div class="slider-container pt-3">
         <carousel v-bind="settings">
           <slide v-for="slide in 10" :key="slide">
             <testimonials-card />

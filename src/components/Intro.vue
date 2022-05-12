@@ -1,12 +1,18 @@
 <template>
   <div class="intro">
+    <navbar />
     <div class="container">
       <div class="row">
-        <div class="image col-md-6 px-5">
-          <img src="@/assets/s1_img.webp" class="img-fluid" alt="technomasr" />
+        <div class="image col-lg-5 col-xl-6 fade-in-right">
+          <img
+            src="@/assets/s1_img.webp"
+            class="w-75 d-block mx-auto"
+            alt="technomasr"
+          />
         </div>
-        <div class="info mb-5 mb-lg-0 col-md-6 flex-centerd px-5">
-          <div>
+        <div class="info mb-lg-0 col-lg-7 col-xl-6 fade-in-left">
+          <features class="fade-in-top pt-5" />
+          <div class="pt-3">
             <h2 class="fs-4 main-color mb-4">
               تعرف على باقات تصميم متاجر الكترونية احترافية
             </h2>
@@ -17,7 +23,7 @@
               مجهود ممكن.
             </p>
             <div class="text-center">
-              <router-link class="btn btn-primary fw-bold" to="/">
+              <router-link class="btn btn-primary fw-bold" to="/offers">
                 المزيد عن العرض
               </router-link>
             </div>
@@ -25,14 +31,14 @@
         </div>
       </div>
     </div>
-    <features />
   </div>
 </template>
 
 <script>
 import Features from './Features.vue'
+import Navbar from './Navbar.vue'
 export default {
-  components: { Features },
+  components: { Features, Navbar },
 }
 </script>
 
@@ -43,7 +49,20 @@ export default {
   background-size: cover;
   background-position: center center;
   .container {
-    padding-top: 100px;
+    padding-top: 50px;
+  }
+}
+.image img {
+  animation: bouncing 5s linear infinite;
+  height: auto;
+}
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
   }
 }
 </style>

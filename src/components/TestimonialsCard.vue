@@ -1,16 +1,14 @@
 <template>
   <div class="testi-card flex-centerd">
+    <div class="text text-end pe-2">
+      <h4 class="fs-5">.د/حلمي سليمان</h4>
+      <span class="">إستشاري الجراحات التجميلية</span>
+      <p class="fs-6 mt-2">
+        موقع إلكتروني رائع ودعم فني ممتاز وبرنامج إداري موفر للوقت بشكل كبير
+      </p>
+    </div>
     <div class="image">
       <img src="@/assets/man.png" class="rounded-circle" alt="technomasr" />
-    </div>
-    <div class="text text-end">
-      <p class="fs-6 p-4">
-        <q>
-          موقع إلكتروني رائع ودعم فني ممتاز وبرنامج إداري موفر للوقت بشكل كبير
-        </q>
-      </p>
-      <h4 class="text-primary m-0 px-2">.د/حلمي سليمان</h4>
-      <span class="px-2 px-2">إستشاري الجراحات التجميلية</span>
     </div>
   </div>
 </template>
@@ -28,7 +26,7 @@ export default {}
   position: relative;
   cursor: pointer;
   margin: 20px 10px;
-  box-shadow: 0 0 10px 0 #000;
+  // box-shadow: 0 0 10px 0 #000;
   .image {
     img {
       width: 120px;
@@ -39,9 +37,15 @@ export default {}
     }
   }
   .text {
+    h4 {
+      color: #005384;
+    }
     span {
       font-size: 13px;
-      color: #444;
+      color: #868e96 !important;
+    }
+    p {
+      color: #333;
     }
   }
 }

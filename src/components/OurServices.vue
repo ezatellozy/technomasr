@@ -1,24 +1,34 @@
 <template>
-  <div class="container mb-5">
-    <h2 class="main-title">خدماتنا</h2>
-    <div class="row">
-      <div class="col-lg-3 services-section overlay rounded overflow-hidden">
-        <div class="text-white text-center my-auto">
-          <h2 class="mb-5">خدماتنا</h2>
-
-          <p>
-            تقدم أيضاً الشركة خدمة تصميم المتاجر الكترونية ، تصميم تطبيقات
-            الجوال ،خدمات التسويق الإلكتروني و برامج الحسابات و الإدارة
-          </p>
-
-          <router-link class="btn btn-primary mt-5" to="/">
-            خدمات تكنو مصر
-          </router-link>
-        </div>
+  <div class="our-services pt-50" :class="getSection ? 'fade-in-top' : ''">
+    <div class="container mb-5">
+      <div class="position-relative">
+        <h2 class="main-title">خدماتنا</h2>
+        <p class="text-center">
+          شركة تكنو مصر هي أفضل شركة تصميم مواقع الكترونية في مصر ،تقدم أيضاً
+          الشركة خدمة تصميم المتاجر الكترونية ، تصميم تطبيقات الجوال ،خدمات
+          التسويق الإلكتروني و برامج الحسابات و الإدارة
+        </p>
       </div>
-      <div class="col-lg-9">
-        <div class="row">
-          <div class="col-sm-6 col-lg-4">
+      <div class="row pt-3">
+        <div
+          class="col-lg-3 mb-3 mb-lg-0 services-section overlay rounded overflow-hidden"
+          :class="getSection ? 'fade-in-right' : ''"
+        >
+          <div class="text-white text-center my-auto p-4">
+            <h2 class="mb-5">خدماتنا</h2>
+
+            <p>
+              تقدم أيضاً الشركة خدمة تصميم المتاجر الكترونية ، تصميم تطبيقات
+              الجوال ،خدمات التسويق الإلكتروني و برامج الحسابات و الإدارة
+            </p>
+
+            <router-link class="btn link py-3" to="/">
+              خدمات تكنو مصر
+            </router-link>
+          </div>
+        </div>
+        <div class="col-lg-9" :class="getSection ? 'fade-in-left' : ''">
+          <div class="services">
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -41,8 +51,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
+
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -64,8 +73,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
+
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -88,8 +96,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
+
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -110,8 +117,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
+
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -132,8 +138,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
+
             <div class="service">
               <div class="image">
                 <router-link to="/">
@@ -163,40 +168,104 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      getSection: false,
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.getElement)
+  },
+  methods: {
+    getElement() {
+      let ourServices = document.querySelector('.our-services')
+      if (ourServices) {
+        if (window.scrollY >= ourServices.offsetTop - 600) {
+          // console.log('true')
+          this.getSection = true
+        }
+      }
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-.service {
-  background: #f5f5f5;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px 0;
-  .image {
-    width: 150px;
-    margin: 0 auto 10px;
+.our-services {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.services {
+  & > div {
+    padding: 0 10px 0 0 !important;
   }
-  .info {
-    h5 {
-      position: relative;
-      margin-bottom: 30px;
-      color: #005384;
-      &::before {
-        content: '';
-        position: absolute;
-        height: 2px;
-        background-color: #005384 !important;
-        width: 70px;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  .service {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px 0;
+    height: 330px;
+    .image {
+      width: 150px;
+      margin: 0 auto 10px;
+    }
+    .info {
+      h5 {
+        position: relative;
+        margin-bottom: 30px;
+        color: #005384;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          background-color: #005384 !important;
+          width: 70px;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      p {
+        height: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
+  }
+}
+@media (max-width: 992px) {
+  .row > * {
+    padding: 0 !important;
   }
 }
 .services-section {
   background-image: url('@/assets/services.jpg');
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
+  position: relative;
+  // margin: 10px 0;
+  p {
+    margin-bottom: 70px;
+  }
+  .link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    color: #005384;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    background: #f5f5f5;
+    &:hover {
+      background: #005384;
+      color: #fff;
+    }
+  }
 }
 </style>

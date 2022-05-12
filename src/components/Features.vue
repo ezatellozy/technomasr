@@ -1,57 +1,67 @@
 <template>
-  <div class="mt-4">
-    <ul class="content border-top pt-4 px-0">
-      <li class="flex-column flex-centerd">
+  <div class="mb-4">
+    <ul
+      class="content px-0 d-flex flex-wrap justify-content-center justify-content-md-between"
+    >
+      <li>
         <div
-          class="bg-main text-white icon-container flex-centerd rounded-circle p-3 mb-2"
+          class="bg-main mx-auto text-white icon-container flex-centerd rounded-circle"
         >
-          <font-awesome-icon size="3x" class="icon" :icon="['fas', 'rocket']" />
+          <font-awesome-icon size="2x" class="icon" :icon="['fas', 'rocket']" />
         </div>
         <h5 class="main-color">حلول مبتكرة</h5>
       </li>
 
-      <li class="flex-column flex-centerd">
+      <li>
         <div
-          class="bg-main text-white icon-container flex-centerd rounded-circle p-3 mb-2"
+          class="bg-main mx-auto text-white icon-container flex-centerd rounded-circle"
         >
           <font-awesome-icon
-            size="3x"
+            size="2x"
             class="icon"
             :icon="['fas', 'dashboard']"
           />
         </div>
-        <h5 class="main-color">حلول مبتكرة</h5>
+        <h5 class="main-color">سرعه الاداء</h5>
       </li>
 
-      <li class="flex-column flex-centerd">
+      <li>
         <div
-          class="bg-main text-white icon-container flex-centerd rounded-circle p-3 mb-2"
+          class="bg-main mx-auto text-white icon-container flex-centerd rounded-circle"
         >
           <font-awesome-icon
-            size="3x"
+            size="2x"
             class="icon"
             :icon="['fas', 'headphones']"
           />
         </div>
-        <h5 class="main-color">حلول مبتكرة</h5>
+        <h5 class="main-color">دعم فني 24/7</h5>
       </li>
 
-      <li class="flex-column flex-centerd">
+      <li>
         <div
-          class="bg-main icon-container flex-centerd text-white rounded-circle p-3 mb-2"
+          class="bg-main mx-auto icon-container flex-centerd text-white rounded-circle"
         >
-          <font-awesome-icon size="3x" :icon="['fas', 'lock']" />
+          <font-awesome-icon size="2x" :icon="['fas', 'lock']" />
         </div>
-        <h5 class="main-color">حلول مبتكرة</h5>
+        <h5 class="main-color">حماية قوية</h5>
       </li>
 
-      <li class="flex-column flex-centerd">
+      <li>
         <div
-          class="bg-main text-white icon-container flex-centerd rounded-circle p-3 mb-2"
+          class="bg-main mx-auto text-white icon-container flex-centerd rounded-circle"
         >
-          <font-awesome-icon size="3x" class="icon" :icon="['fas', 'usd']" />
+          <font-awesome-icon size="2x" class="icon" :icon="['fas', 'pencil']" />
         </div>
-        <h5 class="main-color">حلول مبتكرة</h5>
+        <h5 class="main-color">عقد مسجل</h5>
+      </li>
+      <li>
+        <div
+          class="bg-main mx-auto text-white icon-container flex-centerd rounded-circle"
+        >
+          <font-awesome-icon size="2x" class="icon" :icon="['fas', 'usd']" />
+        </div>
+        <h5 class="main-color">أقل الأسعار</h5>
       </li>
     </ul>
   </div>
@@ -65,18 +75,18 @@ export default {}
 li {
   list-style: none;
   margin-bottom: 20px;
+  margin-right: 10px;
   @media (min-width: 768px) {
-    margin-bottom: 0;
+    margin: 0;
+  }
+  h5 {
+    font-size: 16px;
   }
 }
-.content {
-  max-width: 750px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
+
 .icon-container {
-  width: 80px;
-  height: 80px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
 }
 </style>

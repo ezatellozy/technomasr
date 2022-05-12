@@ -1,19 +1,19 @@
 <template>
-  <div class="service overlay">
-    <div>
-      <div class="image text-center">
-        <img class="img-fluid" src="@/assets/service6.webp" alt="technomasr" />
-      </div>
-      <div class="info text-center px-2">
-        <h5 class="secondary-color">التسويق الإلكترونى</h5>
-        <p>
-          قم بإنشاء أعمالك وسنقوم بوضع الخطط الخاصة بك لتسويق تلك الأعمال
-          والإنتشار بين العملاء
-        </p>
-      </div>
+  <div class="service">
+    <div class="image">
+      <router-link to="/">
+        <img class="img-fluid" src="@/assets/service1.webp" alt="technomasr" />
+      </router-link>
     </div>
-    <div class="link">
-      <router-link class="btn btn-primary" to="/">المزيد</router-link>
+    <div class="info text-center px-2">
+      <router-link to="/service" class="secondary-color primary-color-hover">
+        <h5>تصميم متجر إلكتروني</h5>
+      </router-link>
+
+      <p>
+        ننشئ لك متجر إلكتروني إحترافي متكامل مع الربط بوسائل الدفع والشحن لتجارة
+        إلكترونية متكاملة تستطيع من خلالها القيام بنشاطك التجاري ...
+      </p>
     </div>
   </div>
 </template>
@@ -24,61 +24,35 @@ export default {}
 
 <style lang="scss" scoped>
 .service {
-  box-shadow: 0 0 1px 0 #000;
+  // background: #f5f5f5;
   border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  .overlayin {
-    position: relative;
-    display: flex;
-    color: #fff;
-    transition: all 0.3s linear;
-    & > div {
-      z-index: 10;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      transition: all 0.3s linear;
-    }
+  padding: 10px 0;
+  height: 330px;
+  .image {
+    width: 150px;
+    margin: 0 auto 10px;
   }
-  &.overlay {
-    transition: 0.3s;
-    &::before {
-      transition: 0.3s;
-      transform: scale(0.5);
-      content: unset;
-    }
-    color: #333;
-  }
-  &:hover {
-    &.overlay {
+  .info {
+    h5 {
+      position: relative;
+      margin-bottom: 30px;
+      color: #005384;
       &::before {
         content: '';
-        transition: 0.3s;
-        transform: scale(1);
-        z-index: 20;
+        position: absolute;
+        height: 2px;
+        background-color: #005384 !important;
+        width: 70px;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
-    .link {
-      display: block;
+    p {
+      height: 100px;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
-  }
-  .link {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 30;
-
-    transition: all 0.3s linear;
   }
 }
 </style>

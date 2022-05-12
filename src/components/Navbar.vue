@@ -1,8 +1,5 @@
 <template>
-  <nav
-    class="navbar navbar-expand-lg fixed-top"
-    :class="scroll ? 'scroll' : ''"
-  >
+  <nav class="navbar navbar-expand-lg" :class="scroll ? 'scroll' : ''">
     <div class="container">
       <router-link class="navbar-brand" to="/">
         <img src="@/assets/logo.png" class="img-fluid logo" alt="technomasr" />
@@ -17,7 +14,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <font-awesome-icon :icon="['fas', 'bars']" size="xl" />
+        <font-awesome-icon :icon="['fas', 'bars']" size="lg" />
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,7 +31,7 @@
             <router-link class="nav-link" to="/our-works">أعمالنا</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/teamMembers">
+            <router-link class="nav-link" to="/teamWork">
               فريق العمل
             </router-link>
           </li>
@@ -64,7 +61,7 @@ export default {
   },
   methods: {
     checkScroll() {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 150) {
         this.scroll = true
         return
       }
@@ -142,6 +139,7 @@ button.navbar-toggler {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 20;
   }
 }
 @keyframes fadeIn {

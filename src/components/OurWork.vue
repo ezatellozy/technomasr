@@ -1,14 +1,19 @@
 <template>
-  <div id="our-work" class="our-work overlay py-50">
+  <div id="our-work" class="our-work py-50">
     <div class="container">
-      <h2 class="main-title">أعمالنا</h2>
-      <div class="slider-container">
-        <carousel v-bind="settings">
-          <slide v-for="slide in 10" :key="slide">
-            <slider-card />
-          </slide>
-        </carousel>
+      <div class="position-relative">
+        <h2 class="main-title">أعمالنا</h2>
+        <p class="text-center">
+          نملك الأفكار الإبداعية التى تستطيع أن توفر لك أفضل الخدمات التقنية
+          لإنشاء موقعك الإلكترونى أو برنامجك الإدارى أو تطبيقات الهواتف وكذلك
+          التسويق الرقمى لنشاطك التجارى
+        </p>
       </div>
+
+      <div class="content">
+        <slider-card v-for="n in 6" :key="n" />
+      </div>
+
       <div class="text-center mt-5">
         <router-link to="/" class="btn btn-primary">عرض المزيد</router-link>
       </div>
@@ -18,48 +23,30 @@
 
 <script>
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
+
 import SliderCard from './OurWorkCard.vue'
 
 export default {
   name: 'App',
   components: {
-    Carousel,
-    Slide,
     SliderCard,
   },
   data() {
-    return {
-      settings: {
-        autoplay: 2000,
-        itemsToShow: 2,
-        // wrapAround: true,
-        snapAlign: 'center',
-        breakpoints: {
-          768: {
-            itemsToShow: 3,
-            snapAlign: 'center',
-          },
-          1200: {
-            itemsToShow: 5,
-            snapAlign: 'center',
-          },
-        },
-      },
-    }
+    return {}
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .our-work {
-  background-image: url('@/assets/services.jpg');
-  background-size: cover;
-  background-position: center center;
-  .slider-container {
-    .flip-card {
-      margin: 0 10px;
+  // background-image: url('@/assets/services.jpg');
+  // background-size: cover;
+  // background-position: center center;
+  .container {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 10px;
     }
   }
 }

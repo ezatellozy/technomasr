@@ -1,14 +1,21 @@
 <template>
-  <div class="about-us py-5 mt-5">
+  <div class="about-us pt-5 pt-md-0">
     <div class="container">
-      <h2 class="main-title" v-if="withTitle">
-        من نحن
-      </h2>
-      <div class="row flex-row-reverse">
+      <div class="position-relative title-fade-in">
+        <h2 class="main-title">
+          من نحن
+        </h2>
+        <p class="text-center">
+          تكنو مصر أحد رواد الخدمات التقنية بالوطن العربي،متميزون بتقديم خدمات
+          تصميم مواقع الكترونية ،تصميم متاجر الكترونية و برمجة تطبيقات الهاتف و
+          خدمات التسويق
+        </p>
+      </div>
+      <div class="row flex-row-reverse pt-3 content-fade-in">
         <div class="image col-md-6 px-5">
           <img src="@/assets/about.png" class="img-fluid" alt="technomasr" />
         </div>
-        <div class="info mb-5 mb-lg-0 col-md-6 mt-5 px-5">
+        <div class="info mb-5 mb-lg-0 col-md-6 mt-5 px-5 fade-in-right">
           <div>
             <h2 class="fs-4 main-color mb-4">
               تكنو مصر أحد رواد الخدمات التقنية بالوطن العربي
@@ -19,7 +26,7 @@
               الكترونية و برامج ادارة الحسابات المختلفة
             </p>
             <div class="text-center" v-if="withBtn">
-              <router-link class="btn btn-primary fw-bold" to="/">
+              <router-link class="btn btn-primary fw-bold" to="/about">
                 المزيد عن تكنو مصر
               </router-link>
             </div>
@@ -40,7 +47,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .about-us {
-//   background-color: #f5f5f5;
+.about-us {
+  transition: all 0.3s;
+  // opacity: 0;
+}
+// .image img {
+//   animation: bouncing 5s linear infinite;
+//   height: auto;
+// }
+// @keyframes bouncing {
+//   0%,
+//   100% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(50px);
+//   }
 // }
 </style>
