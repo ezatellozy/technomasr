@@ -2,8 +2,8 @@
   <div class="team-members py-5">
     <div class="container">
       <div class="text-center info">
-        <h3>فريق العمل</h3>
-        <p class="subtitle">
+        <h2 class="main-title fs-2" data-aos="fade-up">فريق العمل</h2>
+        <p class="text-center">
           You can relay on our amazing features list and also our customer
           services will be great experience for you without doubt and in no-time
         </p>
@@ -18,9 +18,13 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import MemberCard from '@/components/MemberCard.vue'
 export default {
   components: { MemberCard },
+  created() {
+    AOS.init()
+  },
 }
 </script>
 

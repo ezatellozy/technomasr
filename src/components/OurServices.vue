@@ -1,7 +1,7 @@
 <template>
-  <div class="our-services pt-50" :class="getSection ? 'fade-in-top' : ''">
+  <div class="our-services pt-50">
     <div class="container mb-5">
-      <div class="position-relative">
+      <div class="position-relative" data-aos="fade-in">
         <h2 class="main-title">خدماتنا</h2>
         <p class="text-center">
           شركة تكنو مصر هي أفضل شركة تصميم مواقع الكترونية في مصر ،تقدم أيضاً
@@ -11,8 +11,8 @@
       </div>
       <div class="row pt-3">
         <div
+          data-aos="fade-in-left"
           class="col-lg-3 mb-3 mb-lg-0 services-section overlay rounded overflow-hidden"
-          :class="getSection ? 'fade-in-right' : ''"
         >
           <div class="text-white text-center my-auto p-4">
             <h2 class="mb-5">خدماتنا</h2>
@@ -27,9 +27,14 @@
             </router-link>
           </div>
         </div>
-        <div class="col-lg-9" :class="getSection ? 'fade-in-left' : ''">
+        <div class="col-lg-9" data-aos="fade-in-right">
           <div class="services">
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -52,7 +57,12 @@
               </div>
             </div>
 
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -74,7 +84,12 @@
               </div>
             </div>
 
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -97,7 +112,12 @@
               </div>
             </div>
 
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -118,7 +138,12 @@
               </div>
             </div>
 
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -139,7 +164,12 @@
               </div>
             </div>
 
-            <div class="service">
+            <div
+              class="service"
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              >
               <div class="image">
                 <router-link to="/">
                   <img
@@ -171,31 +201,25 @@
 export default {
   data() {
     return {
-      getSection: false,
+      // getSection: false,
     }
   },
-  created() {
-    window.addEventListener('scroll', this.getElement)
-  },
+
   methods: {
-    getElement() {
-      let ourServices = document.querySelector('.our-services')
-      if (ourServices) {
-        if (window.scrollY >= ourServices.offsetTop - 600) {
-          // console.log('true')
-          this.getSection = true
-        }
-      }
-    },
+    // getElement() {
+    //   let ourServices = document.querySelector('.our-services')
+    //   if (ourServices) {
+    //     if (window.scrollY >= ourServices.offsetTop - 600) {
+    //       // console.log('true')
+    //       this.getSection = true
+    //     }
+    //   }
+    // },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.our-services {
-  opacity: 0;
-  transition: all 0.3s;
-}
 .services {
   & > div {
     padding: 0 10px 0 0 !important;

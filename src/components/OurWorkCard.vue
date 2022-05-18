@@ -2,6 +2,7 @@
   <router-link to="/work">
     <div
       class="portfolio-card bg-white d-flex justify-content-between flex-column"
+      data-aos="zoom-out-up"
     >
       <div class="image-container">
         <img src="@/assets/our-work.jpg" alt="" class="img-fluid" />

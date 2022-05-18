@@ -8,6 +8,9 @@ import TeamMember from '../views/TeamMember.vue'
 import Contact from '../views/Contact.vue'
 import Offers from '../views/Offers.vue'
 import Work from '../views/Work.vue'
+import Training from '../views/Training.vue'
+import JoinTeam from '../views/JoinTeam.vue'
+import JobDescription from '@/components/JobDescription.vue'
 import TeamWork from '@/components/OurTeam.vue'
 
 const routes = [
@@ -20,6 +23,21 @@ const routes = [
     path: '/work',
     name: 'work',
     component: Work,
+  },
+  {
+    path: '/join',
+    name: 'join',
+    component: JoinTeam,
+  },
+  {
+    path: '/training',
+    name: 'training',
+    component: Training,
+  },
+  {
+    path: '/jobs',
+    name: 'jobs',
+    component: JobDescription,
   },
   {
     path: '/about',

@@ -17,6 +17,7 @@
 import Navbar from '@/components/Navbar.vue'
 import MainFooter from './components/MainFooter.vue'
 import Whatsup from './components/Whatsup.vue'
+
 // import Discuss from './components/Discuss.vue'
 export default {
   components: { Navbar, MainFooter, Whatsup },

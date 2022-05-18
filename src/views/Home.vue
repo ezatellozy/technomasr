@@ -1,11 +1,7 @@
 <template>
   <div class="home overflow-hidden">
     <intro />
-    <about-us
-      :class="getAboutUs ? 'title-fade-in' : ''"
-      withBtn="true"
-      withTitle="true"
-    />
+    <about-us withBtn="true" withTitle="true" />
     <our-services />
     <our-work />
     <testimonials />
@@ -27,23 +23,22 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      getAboutUs: false,
+      // getAboutUs: false,
     }
   },
   created() {
-    window.addEventListener('scroll', this.getElement)
+    // window.addEventListener('scroll', this.getElement)
   },
   methods: {
-    getElement() {
-      let aboutUs = document.querySelector('.about-us')
-
-      if (aboutUs) {
-        if (window.scrollY >= aboutUs.offsetTop - 600) {
-          // console.log('true')
-          this.getAboutUs = true
-        }
-      }
-    },
+    // getElement() {
+    //   let aboutUs = document.querySelector('.about-us')
+    //   if (aboutUs) {
+    //     if (window.scrollY >= aboutUs.offsetTop - 600) {
+    //       // console.log('true')
+    //       this.getAboutUs = true
+    //     }
+    //   }
+    // },
   },
 }
 </script>
@@ -66,7 +61,6 @@ export default {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.616);
-    // z-index: 10;
   }
 }
 </style>

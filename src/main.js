@@ -13,13 +13,19 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 library.add(fas)
 library.add(fab)
 library.add(far)
+
 const app = createApp(App)
+
+app.AOS = new AOS.init()
 app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.use(i18n)
 app.use(store)
+app.use(AOS)
 app.use(BootstrapVue3)
 app.use(router)
 app.mount('#app')

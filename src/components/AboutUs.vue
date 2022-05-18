@@ -1,7 +1,7 @@
 <template>
   <div class="about-us pt-5 pt-md-0">
     <div class="container">
-      <div class="position-relative title-fade-in">
+      <div class="position-relative" data-aos="fade-up">
         <h2 class="main-title">
           من نحن
         </h2>
@@ -11,11 +11,11 @@
           خدمات التسويق
         </p>
       </div>
-      <div class="row flex-row-reverse pt-3 content-fade-in">
-        <div class="image col-md-6 px-5">
+      <div class="row flex-row-reverse pt-3">
+        <div class="image col-md-6 px-5" data-aos="zoom-in">
           <img src="@/assets/about.png" class="img-fluid" alt="technomasr" />
         </div>
-        <div class="info mb-5 mb-lg-0 col-md-6 mt-5 px-5 fade-in-right">
+        <div class="info mb-5 mb-lg-0 col-md-6 mt-5 px-5" data-aos="zoom-in">
           <div>
             <h2 class="fs-4 main-color mb-4">
               تكنو مصر أحد رواد الخدمات التقنية بالوطن العربي

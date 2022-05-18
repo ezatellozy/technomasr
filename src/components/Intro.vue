@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   background-image: url('@/assets/header-hero.webp');
   background-size: cover;
   background-position: center center;

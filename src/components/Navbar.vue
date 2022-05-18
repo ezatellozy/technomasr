@@ -25,10 +25,10 @@
             <router-link class="nav-link" to="/about">من نحن</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/services">خدماتنا</router-link>
+            <a class="nav-link" href="/services">خدماتنا</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/our-works">أعمالنا</router-link>
+            <a class="nav-link" href="/our-works">أعمالنا</a>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/teamWork">

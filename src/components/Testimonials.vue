@@ -1,7 +1,7 @@
 <template>
   <div id="testimonials" class="testimonials py-50">
     <div class="container">
-      <div class="position-relative">
+      <div class="position-relative" data-aos="fade-up">
         <h2 class="main-title">قالوا عن تكنو مصر</h2>
         <p class="text-center">
           نسعد دائما بالتواصل مع عملائنا بشكل مستمر للتعرف على آراءهم فى مستوى
@@ -24,7 +24,6 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 import TestimonialsCard from './TestimonialsCard.vue'
-
 export default {
   components: {
     Carousel,

@@ -1,5 +1,9 @@
 <template>
-  <div class="service">
+  <div
+    class="service"
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom"
+  >
     <div class="image">
       <router-link to="/">
         <img class="img-fluid" src="@/assets/service1.webp" alt="technomasr" />

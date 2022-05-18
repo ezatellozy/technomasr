@@ -1,8 +1,14 @@
 <template>
-  <footer class="footer position-relative pt-50">
+  <footer class="footer position-relative d-flex">
     <div class="container">
-      <div class="row content">
-        <div class="col-lg-4">
+      <div class="logo w-100 position-relative" data-aos="fade-up">
+        <img src="@/assets/logo.png" alt="technomasr" class="img-fluid" />
+        <p class="mb-2 text-center">
+          تكنو مصر للبرمجيات ولخدمات الويب والتسويق الرقمى
+        </p>
+      </div>
+      <div class="row content" data-aos="fade-up">
+        <div class="col-lg-5">
           <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13675.833764016936!2d31.3732275!3d31.0274075!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x859ee8ea1a8da4ae!2sTechnomasr%20for%20web%20solutions!5e0!3m2!1sen!2seg!4v1596684538546!5m2!1sen!2seg"
@@ -59,14 +65,14 @@
             </b-form>
           </div> -->
         </div>
-        <div class="col-lg-5 pt-5 pt-lg-0 text-center text-lg-end">
+        <div class="col-lg-7 pt-5 pt-lg-0 text-center text-lg-end">
           <div class="row text">
             <div class="col-sm-6">
               <h3>
                 موقعنا
               </h3>
               <div class="info">
-                <p class="mb-2 text-primary">
+                <p class="mb-2">
                   <font-awesome-icon :icon="['fas', 'location']" />
                   المنصورة , ش المطافي برج الدالي الدور التاسع
                 </p>
@@ -150,18 +156,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 pt-5 pt-md-0">
-          <div>
-            <div class="logo mx-auto">
-              <img src="@/assets/logo.png" alt="technomasr" class="img-fluid" />
-            </div>
-            <p class="mb-2 text-center">
-              تكنو مصر للبرمجيات ولخدمات الويب والتسويق الرقمى
-            </p>
-          </div>
-        </div>
       </div>
-
       <div class="copyright text-center bg-primary-color">
         <p>
           كافة الحقوق محفوظة لشركة تكنو مصر للبرمجيات ولخدمات الويب والتسويق
@@ -197,13 +192,42 @@ export default {
 <style scoped lang="scss">
 .footer {
   height: fit-content;
-  // background-color: #011f31;
-  padding-top: 100px;
+
+  .logo {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    z-index: 10;
+    img {
+      max-width: 150px;
+    }
+  }
   .content {
     min-height: 300px;
-  }
-  .logo {
-    width: 150px;
+    padding-top: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 1px;
+      background-size: 100% 100%;
+      background-image: url('@/assets/thinline.png');
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 0;
+      right: 0;
+      background-image: url('@/assets/fff.png');
+      background-size: 100% 100%;
+      height: 125px;
+      z-index: -1;
+    }
   }
   .copyright {
     position: relative;
@@ -228,9 +252,9 @@ export default {
   }
   .row.text {
     h3 {
-      color: #011f31;
       font-size: 20px;
     }
+    color: #555 !important;
   }
   .info {
     padding-top: 20px;
@@ -261,37 +285,26 @@ export default {
       align-items: center;
       justify-content: center;
       background-color: #fff;
+      color: #555;
       border-radius: 50%;
-      border: 1px solid #3b5998;
+      border: 1px solid #555;
       &:first-child {
         margin-right: 5px;
       }
       &:hover {
         transition: all 0.3s;
         background-color: #3b5998;
+        border-color: #3b5998;
         color: #fff;
       }
     }
   }
+  .contain {
+    .contact {
+      a {
+        color: #555;
+      }
+    }
+  }
 }
-// .map {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-//   overflow: hidden;
-//   opacity: 0.2;
-//   // &::before {
-//   //   content: '';
-//   //   position: absolute;
-//   //   top: 0;
-//   //   left: 0;
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   background-color: rgba(0, 0, 0, 0.747);
-//   //   z-index: 1;
-//   // }
-// }
 </style>

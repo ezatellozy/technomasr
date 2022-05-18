@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="stat col-md-4 text-primary text-center">
-          <div class="logo">
-            <img src="@/assets/experience-icon.png" alt="technomasr" />
-          </div>
+          <span>
+            <font-awesome-icon :icon="['fas', 'star']" />
+          </span>
           <p>
             +
             <span class="count fs-4" data-count="400">0</span>
@@ -14,9 +14,9 @@
         </div>
 
         <div class="stat col-md-4 text-primary text-center">
-          <div class="logo">
-            <img src="@/assets/clients-icon-png-1.jpg" alt="technomasr" />
-          </div>
+          <span>
+            <font-awesome-icon :icon="['fas', 'users']" />
+          </span>
           <p>
             +
             <span class="count fs-4" data-count="1000">0</span>
@@ -25,9 +25,9 @@
         </div>
 
         <div class="stat col-md-4 text-primary text-center">
-          <div class="logo">
-            <img src="@/assets/projects.png" alt="technomasr" />
-          </div>
+          <span>
+            <font-awesome-icon :icon="['fas', 'code']" />
+          </span>
           <p>
             +
             <span class="count fs-4" data-count="800">0</span>
@@ -81,18 +81,25 @@ export default {
 .statistics {
   .stat {
     margin-bottom: 15px;
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 5px;
-      img {
-        max-width: 100%;
-        height: auto;
-        filter: brightness(1) invert(0.3);
-      }
+    color: #444 !important;
+    & > span {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 45px;
     }
+
     p {
+      & > span {
+        font-weight: bold;
+        font-size: 30px !important;
+      }
       margin-bottom: 0;
+    }
+    h4 {
+      color: #0c6ea2;
+      font-style: italic;
+      font-size: 20px;
+      font-weight: bold;
     }
   }
 }

@@ -16,16 +16,10 @@
               استطعنا
             </p>
             <div class="link">
-              <a
-                href="https://technomasr.com/TrainingOpportunities/فرص-التدريب"
-                class="btn mb-4 gradient-top text-white p-10"
-              >
+              <a href="/training" class="btn mb-4 gradient-top text-white p-10">
                 فرص التدريب المتاحه
               </a>
-              <a
-                href="https://technomasr.com/JobOpportunities/فرص-العمل"
-                class="btn mb-4 gradient-top text-white p-10"
-              >
+              <a href="/join" class="btn mb-4 gradient-top text-white p-10">
                 إنضم لفريق العمل لدينا
               </a>
             </div>
@@ -51,12 +45,12 @@
               المحددة بسرعة وبدقة متناهيه وهو السب الرئيسى فى تقدم المجتمعات
             </p>
             <div class="link">
-              <router-link
-                to="/teamMembers"
+              <a
+                href="/teamMembers"
                 class="btn m-b-10 gradient-top text-white p-10"
               >
                 تعرف علي فريق العمل
-              </router-link>
+              </a>
             </div>
           </div>
         </div>

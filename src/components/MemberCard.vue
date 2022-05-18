@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-0">
+  <div class="card border-0" data-aos="fade-up" data-aos-duration="3000">
     <div class="card-header p-0">
       <img src="@/assets/w.jpg" alt="technomasr" class="card-img-top" />
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div id="our-work" class="our-work py-50">
     <div class="container">
-      <div class="position-relative">
+      <div class="position-relative mb-4" data-aos="fade-in">
         <h2 class="main-title">أعمالنا</h2>
         <p class="text-center">
           نملك الأفكار الإبداعية التى تستطيع أن توفر لك أفضل الخدمات التقنية
